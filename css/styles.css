@@ -283,6 +283,42 @@ body {
   }
 }
 
+/*CONTACT*/
+
+.contact {
+    
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: transparent;
+  text-decoration: none;  
+  color: #555;
+  font-weight: 500;  
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all .2s;  
+}
+
+.contact:hover {
+  text-decoration: none;
+  color: #000;
+  background-color: transparent;  
+}
+
+.dark-mode .contact {
+  background-color: transparent;
+  text-decoration: none;    
+  color: #888;
+ -webkit-transition: all .2s;  
+}
+
+.dark-mode .contact:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;  
+
+}
+
+
 .section {
   width: auto;
   margin: 15px auto;
