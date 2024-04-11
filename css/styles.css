@@ -1,0 +1,746 @@
+
+
+/* WORDPRESS CORRECTION */
+
+  .entry .entry-content > *,
+  .entry .entry-summary > *,
+  .entry .entry-summary > .wp-block-group > .wp-block-group__inner-container > *,
+  .entry .entry-content > .wp-block-group > .wp-block-group__inner-container > * {
+        margin: 0;
+    }
+
+
+.entry .entry-header {
+    margin: 0 0;
+    position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .entry .entry-header {
+        margin: 0 0;
+    }
+}
+
+
+body.page .entry .entry-content > *, .entry .entry-summary > * {
+    max-width: none;
+}
+
+
+.entry .entry-content, .entry .entry-summary {
+    max-width: 99%;
+    margin: 0 10%;
+    padding: 0 10px;
+    margin: 0 auto !important;
+    text-align: -webkit-center;
+}
+
+
+
+
+
+
+/* Основні стилі для тіла сторінки */
+
+* {
+  -webkit-font-smoothing: antialiased;    
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+  padding: 0;
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  scroll-behavior: smooth;
+  color: #000;
+}
+
+/* DARK MODE */
+
+body {
+  transition: background-color 0.3s ease;
+  margin: 0; /* Видаляє зовнішні відступи */
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff; /* Якщо вам потрібно змінити кольори тексту для кращої читабельності */
+}
+
+.dark-mode .dark-bg {
+  background-color: white;
+  opacity: 0.9;
+}
+
+.dark-mode .dark-mode-button {
+  color: #888;
+}
+
+.dark-mode .dark-mode-button:hover {
+  color: #fff;
+}
+
+.dark-mode .modal {
+  background-color: rgba(30, 30, 30, 0.9);
+
+}
+
+.dark-mode .floating-menu {
+  background-color: rgba(30, 30, 30, 1);
+  color: #fff;
+ -webkit-transition: all .2s;  
+}
+
+.dark-mode .scrollback-menu {
+  background-color: rgba(30, 30, 30, 1);
+  color: #fff;
+ -webkit-transition: all .2s;  
+}
+
+.dark-mode .toggle-button {
+  background-color: transparent;
+  color: #888;
+ -webkit-transition: all .2s;  
+}
+
+
+.dark-mode .toggle-button:hover {
+  text-decoration: underline;
+  color: #fff;
+  background-color: transparent;  
+
+}
+
+.dark-mode .hidden .toggle-button:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.dark-mode-button {
+  display: block;
+  position: fixed;
+  padding-left: 5px;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  background-color: #fff;
+  align-items: center;
+  text-align: right;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.4em;
+  letter-spacing: 4pt;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 3px;    
+  color: #444;
+  opacity: 0.8;  
+  -webkit-transition: all .3s;
+  z-index: 1000; /* Встановіть високе значення z-index */
+}
+
+.dark-mode-button:hover {
+   opacity: 1;    
+   color: #000;   
+}
+
+.dark-mode .dark-mode-button {
+  background-color: #333;   
+}
+
+/* BOTTOM MENU*/
+
+.floating-menu {
+  display: none; /* По замовчуванню меню приховане */
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 2px;
+  z-index: 888;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 90%; /* Задаємо більшу ширину */  
+}
+
+@media (min-width: 768px) {
+  .floating-menu {
+    width: auto; /* Змінюємо ширину контейнера на "auto" для десктопної версії */
+  }
+}
+
+
+.scrollback-menu {
+  display: none; /* По замовчуванню меню приховане */
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  z-index: 888;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  width: auto; /* Задаємо більшу ширину */  
+}
+
+@media (max-width: 767px) {
+  .scrollback-menu {
+    width: auto; /* Збільшуємо ширину контейнера на мобільних пристроях */
+  }
+}
+
+
+
+.toggle-button {
+    
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: #555;
+  font-weight: 500;  
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all .2s;  
+}
+
+.toggle-button:hover {
+  text-decoration: underline;
+  color: #000;
+  background-color: transparent;  
+}
+
+@media (max-width: 767px) {
+  .menu-container {
+    width: 100%; /* Збільшуємо ширину контейнера на мобільних пристроях */
+  }
+}
+
+@media (max-width: 768px) {
+.toggle-button {
+  margin: 4px 0;
+  padding: 2px 4px;
+    }
+}
+
+
+
+.avatar {
+  margin: 20px auto;    
+  width: 100px; /* Задайте ширину та висоту аватара */
+  height: 100px;
+  border-radius: 50%; /* Задайте радіус для створення круглої форми */
+  overflow: hidden; /* Обріжте зайві частини, якщо ви використовуєте квадратний зображення */
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3); 
+  filter: grayscale(0%);  
+  border: solid 1px #333;
+}
+
+.avatar img {
+  width: 100%; /* Зробіть зображення аватара на весь розмір контейнера */
+  height: 100%;
+  object-fit: cover; /* Збережіть пропорції та обріжте зображення, якщо воно не підходить */
+}
+
+.header {
+  width: auto;
+  margin: 15px auto;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2.5em;
+/*  color: #000; */
+  letter-spacing: 6pt ;
+}
+
+
+.info {
+  display: flex;
+  margin: 0 auto;    
+  width: 40%;
+  font-size: 1em;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;  
+  text-align:  justify-all;
+}
+
+@media (max-width: 768px) {
+  .info {
+  width: 80%;
+  }
+}
+
+.section {
+  width: auto;
+  margin: 15px auto;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+  font-size: 1.6em;
+  color: #aaa;
+  letter-spacing: 24pt;
+}
+
+@media (max-width: 768px) {
+  .section {
+    font-size: 1.8em; /* Встановлюємо менший розмір шрифту для малих екранів */
+    letter-spacing: 13pt ;
+  }
+}
+
+
+/* Галерея - контейнер для фотографій */
+.gallery {
+  padding-top: 40px;
+  padding-bottom: 30px;    
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 10px;
+  justify-content: center; /* Центрування по горизонталі */
+  display: none;
+}
+
+.gallery-container {
+  margin: 10px; /* Симетричні відступи */
+}
+
+/* Стилі для кнопки у вигляді фото */
+.toggleGalleryButton {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 2px;
+  margin-bottom: 5px;
+  width: 350px;
+  height: 250px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.3s; /* Додано анімацію зміни прозорості */
+  opacity: 1;
+  border-radius: 1px;    
+}
+
+/* Стилі для фото у кнопці */
+.toggleGalleryButton img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 1px;  
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Стилі для кнопок на малих екранах */
+@media (max-width: 768px) {
+  .toggleGalleryButton {
+  width: 150px;
+  height: 100px; 
+    }
+}
+
+.toggleGalleryButton:hover {
+  border-radius: 1px;      
+  opacity: 1;
+}
+
+.toggleGalleryButton:hover img {
+  transform: scale(1.2);
+  transition: filter 0.5s, transform 0.5s;    
+  filter: grayscale(0);  
+}
+
+.toggleGalleryButton:not(:hover) img {
+  transition: filter 0.5s, transform 0.5s;    
+}
+
+
+
+/* Зміна прозорості фото при активізації кнопки */
+.toggleGalleryButton.active img {
+  opacity: 1.0;
+  transform: scale(1.2);  
+}
+
+.toggleGalleryButton.active {
+  opacity: 1;
+  outline: solid 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Контейнер для однієї фотографії */
+.img-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: auto;
+  height: 250px;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.3s; /* Додано анімацію зміни прозорості */
+  opacity: 1; 
+}
+
+/* Зображення в контейнері фотографії */
+.img-container img {
+  width: auto;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 1px;  
+  transition: transform 0.3s, opacity 0.3s;
+  filter: grayscale(30%);    
+}
+
+/* Стилі для фото галереї на малих екранах */
+@media (max-width: 768px) {
+  .img-container,
+  .img-container img {
+  width: auto;
+  height: 100px;
+    }
+}
+
+.img-container:hover{
+  opacity: 1;
+}
+
+/* Анімація збільшення при наведенні */
+.img-container:hover img {
+  transform: scale(1.3);
+  transition: filter 0.5s, transform 0.5s;  
+  filter: grayscale(0);    
+}
+
+.img-container:not(:hover) img {
+  transition: filter 0.5s, transform 0.5s;   
+}
+
+
+/* Лайтбокс - загальний контейнер */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  flex-direction: column; /* Додайте цей рядок */
+}
+
+/* Зовнішній фон */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: -1;
+}
+
+/* Зовнішній контейнер для лайтбоксу */
+.modal-content {
+  max-width: 90%;
+  width: auto;
+  background-color: #f7f7f7;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  font-family: 'Open Sans', sans-serif;
+  border: 0px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column; /* для вертикального центрування */
+  justify-content: center; /* для вертикального центрування */
+  align-items: center; /* для вертикального центрування */
+}
+
+
+
+/* Зображення у лайтбоксі */
+.modal-image {
+  max-width: 100%;
+  max-height: 95vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;  
+}
+
+/* Стилі для copyright тексту */
+.copyright-text {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  border-radius: 0 5px 0 0;
+  color: white;
+  font-size: 12px;
+  font-family: 'Barlow', sans-serif;
+  z-index: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: font-size 0.3s; /* Додано перехід для плавної анімації зміни розміру шрифту */
+}
+
+#copyright-text {
+  text-transform: uppercase;
+}
+
+/* Стилі для copyright тексту на малих екранах */
+@media (max-width: 668px) {
+  .copyright-text {
+    font-size: 8px; /* Встановлюємо менший розмір шрифту для малих екранів */
+  }
+}
+
+
+/* Підпис під зображенням */
+#caption {
+  text-align: center;
+  color: #666;
+/*  padding-bottom: 20px; */
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.lightbox-caption {
+  position: absolute;
+  bottom: 4%; /* Встановіть бажану відстань віднизу для більших екранів */
+   left: 50%; /* Встановлюємо лівий край в центр контейнера */
+  transform: translateX(-50%); /* Вирівнюємо текст по центру горизонтально */
+  color: #666;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+    white-space: nowrap; /* Запобігає переносу тексту на новий рядок */
+}
+
+@media (max-width: 668px) {
+  .lightbox-caption {
+    bottom: 5%; /* Змінити позицію для менших екранів */
+  }
+}
+
+
+.dark-bg-button {
+  text-align: center;
+  color: #666;
+/*  padding-bottom: 20px; */
+  font-size: 16px;
+  font-weight: 400;  
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Закриваючий хрестик */
+.close {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  color: #888;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 2;
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Зміна колір хрестика при наведенні */
+.close:hover {
+  color: #ff6666;
+}
+
+.close:active {
+  color: #888; /* Змінюємо колір тексту на білий */
+}
+
+/* Стилі для кнопок перемикання фото */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: #666;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.3s;
+  user-select: none;
+  z-index: 3;
+  transition: color 0.3s, transform 0.3s;
+  pointer-events: all;
+  transform: translateY(-50%); /* Залишаємо це для вертикального центрування в контейнері */
+}
+
+.prev {
+    
+  left: 1%;
+}
+
+.next {
+  right: 1%;
+}
+
+.prev:hover, .next:hover {
+  color: #222; 
+/*  transform: scale(1.3); */
+}
+
+.prev:active, .next:active {
+  color: #999; /* Змінюємо колір тексту на білий */
+}
+
+
+.black-background {
+  background-color: black;
+  opacity: 0.9;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+
+
+/* HIDDEN DIV MENU BUTTONS*/
+.hidden .content {
+    display: none;
+}
+
+/* Стилізуємо кнопку */
+.hidden .toggle-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: auto;
+  padding: 5px 10px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2.1em;
+  letter-spacing: 4pt;
+  color: #999;
+  -webkit-transition: all .2s;
+  
+}
+
+@media (max-width: 768px) {
+.hidden .toggle-button {
+  font-size: 1.4em;   
+  letter-spacing: 4pt;  
+  }
+}
+
+
+/* Змінюємо стиль кнопки при наведенні курсора */
+.hidden .toggle-button:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+
+/* Загальні стилі для ліній */
+.hidden .toggle-button.active:before,
+.hidden .toggle-button.active:after {
+  content: "";
+  height: 2px;
+  background-color: #333;
+  display: inline-block;
+  vertical-align: super;
+  margin: 0 10px;
+  width: 100px; /* Загальна ширина для екранів нормального розміру */
+}
+
+/* Медіазапит для адаптивності ширини ліній */
+@media (max-width: 768px) {
+  .hidden .toggle-button.active:before,
+  .hidden .toggle-button.active:after {
+    width: 100%; /* Змінюємо ширину на 100% при вузькому екрані */
+  }
+}
+
+/* Додаткові стилі для центрування стрічок відносно тексту */
+.hidden .toggle-button.active:before,
+.hidden .toggle-button.active:after {
+  margin: 0; /* Скидаємо відступи */
+}
+
+/* To show the lines on right and left sides of the text */
+.hidden .toggle-button .horizontal-line {
+  display: none; /* Спочатку ховаємо горизонтальні лінії */
+}
+
+/* Space on left and right sides of text */
+.hidden .toggle-button:not(.active):not(:empty)::before,
+.hidden .toggle-button:not(.active):not(:empty)::after {
+  content: "";
+  margin: 0 10px;
+  vertical-align: super;
+  display: inline-block;
+}
+
+
+
+
+
+/* CSS для мобільних пристроїв */
+@media (max-width: 767px) {
+    .section-button  {
+        display: block; /* Змінюємо на блочний тип відображення */
+        margin:0 auto; /* Додатковий відступ між кнопками */
+        width: 80%; /* Розмір кнопок на всю ширину екрану */
+        font-size: 1.6em; /* Встановлюємо менший розмір шрифту для малих екранів */
+        font-weight: 300;
+    }
+}
+
+
+
+
+
+/* Додаємо стилі для чорно-білого ефекту та кольорових фотографій */
+.grayscale img {
+  filter: grayscale(60%);
+  
+}
+
+/* Снимаємо ефект чорно-білого для активного контейнера */
+.grayscale.active img {
+  filter: grayscale(0);
+}
+
+img[alt] {
+    color: transparent;
+}
+
+
